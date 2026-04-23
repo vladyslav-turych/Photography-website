@@ -63,19 +63,23 @@
     const query = params.get("id");
     if (!query) return;
     const container = document.getElementById("container");
-    container.innerHTML = "";
+    container.innerHTML = ""; // очищаємо перед новими зображеннями
     for (let i = 1; i < 101; i++) {
-      let url = "https://" + query + i + ".vlad-turych.workers.dev/"
+      let url = "https://" + query + i + ".vlad-turych.workers.dev/";
       const newImg = document.createElement('img');
       newImg.src = url;
       newImg.onload = () => container.appendChild(newImg);
     }
-    let url = "https://" + query + '1' + ".vlad-turych.workers.dev/"
-    const newImg = document.createElement('img');
-    newImg.src = url;
-    newImg.onload = () => document.getElementById("error").textContent = "";
-    newImg.onerror = () => document.getElementById("error").textContent = "Цього ID не існує";
-  });
+    let testUrl = "https://" + query + "1.vlad-turych.workers.dev/";
+    const testImg = document.createElement('img');
+    testImg.src = testUrl;
+    testImg.onload = () => {
+      document.getElementById("error").textContent = "";
+    };
+    testImg.onerror = () => {
+      document.getElementById("error").textContent = "Цього ID не існує";
+    };
+  }
   window.addEventListener("hashchange", checkId);
   setInterval(checkId, 5000);
   checkId();
