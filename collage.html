@@ -80,6 +80,7 @@
   }
   window.addEventListener("DOMContentLoaded", checkId);
   window.addEventListener("hashchange", checkId);
+  checkId();
   searchInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       container.innerHTML = '';
