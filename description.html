@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Фотосесії</title>
+</head>
+<body class="bad-script-regular">
+<header>
+    <nav id="navbar" class="navbar">
+        <div id="links" class="links">
+            <a href="index.html">Головна</a>
+            <a href="description.html">Опис</a>
+            <a href="portrait.html">Діловий портрет</a>
+            <a href="content.html">Контент-зйомка</a>
+            <a href="sport.html">Спорт</a>
+            <a href="family.html">Сімейна зйомка</a>
+            <a href="collage.html">Колаж</a>
+            <a href="#Footer">Контакти</a>
+        </div>
+        <hr class="line">
+    </nav>
+    <article class="header" id="Home">
+        <h1>Опис репортажної зйомки</h1>
+    </article>
+</header>
+<article class="info">
+    <img src="img/article1.jpg" class="img">
+    <section>
+        <h2>Опис репортажної зйомки</h2>
+        <p>Фотографія для мене — це спосіб бути всередині події й бачити більше, ніж помітно на перший погляд.
+            Я працюю в репортажному жанрі, де цінуються чесність, швидкість і увага до деталей.
+            За моїми плечима зйомки в Європейському парламенті, а також досвід роботи в динамічному й вимогливому середовищі.
+            Я знімаю так, щоб кадри говорили самі за себе.</p>
+    </section>
+</article>
+<footer>
+    <div class="footer" id="Footer">
+        <p>Фотограф Лілія Грабовська</p>
+        <p class="contacts">+380 12 345 67 89     photo@gmail.com</p>
+        <div class="social">
+            <a href="#"><img src="img/twitter.svg"></a>
+            <a href="#"><img src="img/facebook.svg"></a>
+            <a href="#"><img src="img/instagram.svg"></a>
+        </div>
+    </div>
+</footer>
+<script>
+    const images = [
+        'url(img/image1.jpg)',
+        'url(img/image2.jpg)',
+        'url(img/image3.jpg)'
+    ];
+    let index = 0;
+    const element = document.querySelector('header');
+    function changeBackground() {
+        element.style.backgroundImage = images[index];
+        index = (index + 1) % images.length;
+    }
+    setInterval(changeBackground, 3000);
+    changeBackground();
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('navbar');
+        const links = document.getElementById('links');
+        if (window.scrollY > 300) {
+            header.classList.add('scrolled');
+            links.classList.add('scrolled-links');
+        } else {
+            header.classList.remove('scrolled');
+            header.classList.remove('scrolled-links');
+        }
+    });
+</script>
+</body>
+</html>

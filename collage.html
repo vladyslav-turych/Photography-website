@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Фотосесії</title>
+</head>
+<body class="bad-script-regular">
+<header id="header">
+  <nav id="navbar" class="navbar">
+    <div id="links" class="links">
+      <a href="index.html">Головна</a>
+      <a href="description.html">Опис</a>
+      <a href="portrait.html">Діловий портрет</a>
+      <a href="content.html">Контент-зйомка</a>
+      <a href="sport.html">Спорт</a>
+      <a href="family.html">Сімейна зйомка</a>
+      <a href="collage.html">Колаж</a>
+      <a href="#Footer">Контакти</a>
+    </div>
+    <hr class="line">
+  </nav>
+  <article class="header" id="Home">
+    <h1>Колаж</h1>
+    <h3>Знайдіть за потрібним ID свій колаж</h3>
+  </article>
+</header>
+<div class="collage">
+  <input class="input" name="q" maxlength="20" placeholder="Введіть ID"/>
+<p id="error"></p>
+<article id="content">
+</article>
+</div>
+<footer>
+  <div class="footer" id="Footer">
+    <p>Фотограф Лілія Грабовська</p>
+    <p class="contacts">+380 12 345 67 89     photo@gmail.com</p>
+    <div class="social">
+      <a href="#"><img src="img/twitter.svg"></a>
+      <a href="#"><img src="img/facebook.svg"></a>
+      <a href="#"><img src="img/instagram.svg"></a>
+    </div>
+  </div>
+</footer>
+<script>
+  const searchInput = document.querySelector('input[name="q"]');
+  const container = document.getElementById('content');
+  const images = [
+    'url(img/image1.jpg)',
+    'url(img/image2.jpg)',
+    'url(img/image3.jpg)'
+  ];
+  let index = 0;
+  const element = document.querySelector('header');
+  function changeBackground() {
+    element.style.backgroundImage = images[index];
+    index = (index + 1) % images.length;
+  }
+  setInterval(changeBackground, 3000);
+  changeBackground();
+  window.addEventListener("hashchange", () => {
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    const query = params.get("id");
+    for (let i = 1; i < 101; i++) {
+      let url = "https://" + query + i + ".vlad-turych.workers.dev/"
+      const newImg = document.createElement('img');
+      newImg.src = url;
+      newImg.onload = () => container.appendChild(newImg);
+    }
+    let url = "https://" + query + '1' + ".vlad-turych.workers.dev/"
+    const newImg = document.createElement('img');
+    newImg.src = url;
+    newImg.onload = () => document.getElementById("error").textContent = "";
+    newImg.onerror = () => document.getElementById("error").textContent = "Цього ID не існує";
+  });
+  searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      container.innerHTML = '';
+      const query = e.target.value;
+      for (let i = 1; i < 101; i++) {
+        let url = "https://" + query + i + ".vlad-turych.workers.dev/"
+        const newImg = document.createElement('img');
+        newImg.src = url;
+        newImg.onload = () => container.appendChild(newImg);
+      }
+      let url = "https://" + query + '1' + ".vlad-turych.workers.dev/"
+      const newImg = document.createElement('img');
+      newImg.src = url;
+      newImg.onload = () => document.getElementById("error").textContent = "";
+      newImg.onerror = () => document.getElementById("error").textContent = "Цього ID не існує";
+    }
+  })
+  window.addEventListener('scroll', function() {
+    const header = document.getElementById('navbar');
+    const links = document.getElementById('links');
+    if (window.scrollY > 300) {
+      header.classList.add('scrolled');
+      links.classList.add('scrolled-links');
+    } else {
+      header.classList.remove('scrolled');
+      header.classList.remove('scrolled-links');
+    }
+  });
+</script>
+</body>
+</html>
