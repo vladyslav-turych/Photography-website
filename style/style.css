@@ -1,0 +1,241 @@
+.bad-script-regular {
+    font-family: "Bad Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-weight: normal;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+header::before{
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Колір (чорний) та прозорість (0.6) */
+    z-index: 0;
+}
+.navbar {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.navbar.scrolled {
+    background-color: #f3f3f3;
+}
+.links{
+    width: 80%;
+    padding: 27px 50px 27px 50px;
+    display: flex;
+    column-gap: 94px;
+    justify-content: space-between;
+    align-items: center;
+}
+.scrolled .links a{
+    color: #000000;
+}
+.links a{
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 28px;
+}
+.links a:hover{
+    color: #e2dcdc;
+}
+.header{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 73px 217px 146px 217px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+h1 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-bottom: 7px;
+}
+.header h3{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 54px;
+}
+hr {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px #ffffff;
+    margin-top: 0px;
+    top: -10px;
+}
+.scrolled hr{
+    border-bottom: solid 1px #000000;
+}
+.info{
+    display: flex;
+    justify-content: center;
+
+}
+.img{
+    max-width: 800px;
+    min-width: 350px;
+    margin: 50px;
+    border-radius: 50px;
+}
+main{
+    padding: 50px 0 50px 0;
+    background: #3a546f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.list{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list a{
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.list h4{
+    font-size: 20px;
+}
+.list a:hover{
+    color: #000000;
+    background: #f3f3f3;
+}
+.content{
+    width: 290px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.content img{
+    width: 100%;
+}
+.info{
+    display: flex;
+    align-items: center;
+    padding: 0 150px 0 150px;
+    text-align: justify;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    background: #f3f3f3;
+}
+.info h3{
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FA4A0C;
+    line-height: 36px;
+    margin-bottom: 7px;
+}
+.info h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: #252B42;
+    line-height: 57px;
+    margin-bottom: 25px;
+}
+.info section{
+    width: 568px;
+}
+.collage{
+    position: relative;
+    z-index: 1;
+    background: #f3f3f3;
+}
+input{
+    margin: 50px 0 0 150px;
+    font-size: 20px;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#content img{
+    width: 50%;
+    height: auto;
+    border-radius: 0;
+}
+#error {
+    margin: 10px 0 0 150px;
+}
+footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #5C5C5C;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: #f3f3f3;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0 150px 0 150px;
+    font-size: 16px;
+}
+footer img{
+    width: 50px;
+    height: 50px;;
+}
+.contacts{
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
