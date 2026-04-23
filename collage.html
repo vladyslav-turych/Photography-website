@@ -79,7 +79,6 @@
       document.getElementById("error").textContent = "Цього ID не існує";
     };
   }
-  window.addEventListener("DOMContentLoaded", checkId);
   window.addEventListener("hashchange", checkId);
   setInterval(checkId, 5000);
   checkId();
