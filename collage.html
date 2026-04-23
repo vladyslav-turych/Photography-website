@@ -61,7 +61,6 @@
   function checkId() {
     const params = new URLSearchParams(window.location.hash.substring(1));
     const query = params.get("id");
-    if (!query) return;
     const container = document.getElementById("container");
     container.innerHTML = ""; // очищаємо перед новими зображеннями
     for (let i = 1; i < 101; i++) {
@@ -81,6 +80,7 @@
     };
   }
   window.addEventListener("DOMContentLoaded", checkId);
+  window.addEventListener("hashchange", checkId);
   setInterval(checkId, 5000);
   checkId();
   searchInput.addEventListener('keypress', function (e) {
