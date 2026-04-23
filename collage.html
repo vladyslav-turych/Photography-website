@@ -80,7 +80,7 @@
       document.getElementById("error").textContent = "Цього ID не існує";
     };
   }
-  window.addEventListener("hashchange", checkId);
+  window.addEventListener("DOMContentLoaded", checkId);
   setInterval(checkId, 5000);
   checkId();
   searchInput.addEventListener('keypress', function (e) {
