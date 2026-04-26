@@ -15,6 +15,7 @@ button{
     background-color: #f3f3f3;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 @media (max-width: 1024px) {
     #links {
