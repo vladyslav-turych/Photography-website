@@ -2,6 +2,7 @@
 <html lang="ua">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <title>Фотосесії</title>
 </head>
@@ -9,6 +10,7 @@
 <header>
     <nav id="navbar" class="navbar">
         <div id="links" class="links">
+            <button id="cross" class="cross">╳</button>
             <a href="index.html">Головна</a>
             <a href="description.html">Опис</a>
             <a href="portrait.html">Діловий портрет</a>
@@ -18,13 +20,12 @@
             <a href="collage.html">Колаж</a>
             <a href="#Footer">Контакти</a>
         </div>
-        <hr class="line">
+        <hr id="line" class="line">
     </nav>
     <article class="header">
         <h1>Фотограф Лілія Грабовська</h1>
         <h3>Групові та індивідуальні фотосесії</h3>
     </article>
-    </div>
 </header>
 <main>
     <div class="list">
@@ -84,6 +85,31 @@
     </div>
 </footer>
 <script>
+    const navopen = document.getElementById('navbutton');
+    const navclose = document.getElementById('cross');
+    const nav = document.getElementById('navbar');
+    const links = document.getElementById('links');
+    const cross = document.getElementById('cross');
+    navopen.addEventListener('click', function() {
+        nav.style.alignItems = 'start';
+        links.style.display = 'flex';
+        cross.style.display = 'inline';
+        links.style.flexDirection = 'column';
+        links.style.justifyContent = 'start';
+        links.style.alignItems = 'start';
+        links.style.gap = '10px';
+
+    });
+    navclose.addEventListener('click', function() {
+        nav.style.alignItems = 'center';
+        links.style.display = 'none';
+        cross.style.display = 'none';
+        links.style.flexDirection = 'row';
+        links.style.justifyContent = 'space-between';
+        links.style.alignItems = 'center';
+        links.style.gap = '0';
+
+    });
     const images = [
         'url(img/image1.jpg)',
         'url(img/image2.jpg)',
