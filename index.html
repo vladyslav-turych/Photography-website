@@ -6,9 +6,11 @@
     <title>Фотосесії</title>
 </head>
 <body class="bad-script-regular">
+<button id="navbutton" class="navbutton">≡</button>
 <header>
     <nav id="navbar" class="navbar">
         <div id="links" class="links">
+            <button id="cross" class="cross">╳</button>
             <a href="index.html">Головна</a>
             <a href="description.html">Опис</a>
             <a href="portrait.html">Діловий портрет</a>
@@ -84,6 +86,30 @@
     </div>
 </footer>
 <script>
+    const navopen = document.getElementById('navbutton');
+    const navclose = document.getElementById('cross');
+    const nav = document.getElementById('navbar');
+    const links = document.getElementById('links');
+    const cross = document.getElementById('cross');
+    navopen.addEventListener('click', function() {
+        nav.style.alignItems = 'start';
+        links.style.display = 'flex';
+        cross.style.display = 'inline';
+        links.style.flexDirection = 'column';
+        links.style.justifyContent = 'start';
+        links.style.alignItems = 'start';
+        links.style.gap = '10px';
+
+    });
+    navclose.addEventListener('click', function() {
+        nav.style.alignItems = 'center';
+        links.style.display = 'none';
+        cross.style.display = 'none';
+        links.style.flexDirection = 'row';
+        links.style.justifyContent = 'space-between';
+        links.style.alignItems = 'center';
+        links.style.gap = '0';
+    });
     const images = [
         'url(img/image1.jpg)',
         'url(img/image2.jpg)',
