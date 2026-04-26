@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ua">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <title>Фотосесії</title>
 </head>
 <body class="bad-script-regular">
-<header>
+<button id="navbutton" class="navbutton">≡</button>
+<header id="header">
     <nav id="navbar" class="navbar">
         <div id="links" class="links">
+            <button id="cross" class="cross">╳</button>
             <a href="index.html">Головна</a>
             <a href="description.html">Опис</a>
             <a href="portrait.html">Діловий портрет</a>
@@ -20,9 +24,10 @@
         </div>
         <hr class="line">
     </nav>
-    <article class="header" id="Home">
-        <h1>Опис репортажної зйомки</h1>
+    <article class="header">
+        <h1 id="h1">Опис репортажної зйомки</h1>
     </article>
+    </div>
 </header>
 <article class="info">
     <img src="img/article1.jpg" class="img">
@@ -46,6 +51,29 @@
     </div>
 </footer>
 <script>
+    const navopen = document.getElementById('navbutton');
+    const navclose = document.getElementById('cross');
+    const nav = document.getElementById('navbar');
+    const links = document.getElementById('links');
+    const cross = document.getElementById('cross');
+    navopen.addEventListener('click', function() {
+        nav.style.alignItems = 'start';
+        links.style.display = 'flex';
+        cross.style.display = 'inline';
+        links.style.flexDirection = 'column';
+        links.style.justifyContent = 'start';
+        links.style.alignItems = 'start';
+        links.style.gap = '20px';
+    });
+    navclose.addEventListener('click', function() {
+        nav.style.alignItems = 'center';
+        links.style.display = 'none';
+        cross.style.display = 'none';
+        links.style.flexDirection = 'row';
+        links.style.justifyContent = 'space-between';
+        links.style.alignItems = 'center';
+        links.style.gap = '0';
+    });
     const images = [
         'url(img/image1.jpg)',
         'url(img/image2.jpg)',
