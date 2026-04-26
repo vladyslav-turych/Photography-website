@@ -19,6 +19,9 @@ button{
     padding: 0;
 }
 @media (max-width: 1024px) {
+    #hrader{
+        height: 800px;
+    }
     #links {
         display: none;
         color: #000000;
