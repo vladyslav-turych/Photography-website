@@ -70,12 +70,12 @@ header::before{
 }
 .navbutton{
     display: none;
-    width: 84px;
-    height: 84px;
+    width: 184px;
+    height: 184px;
     position: fixed;
     z-index: 2;
     text-align: center;
-    font-size: 80px;
+    font-size: 160px;
     margin-top: -5px;
 }
 .navbar {
