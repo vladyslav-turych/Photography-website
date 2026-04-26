@@ -32,10 +32,10 @@ button{
         z-index: 2;
     }
     #links button{
-        margin: 14px 20px 20px 20px;
+        margin: 14px 30px 30px 30px;
     }
     #links a{
-        margin: 20px;
+        margin: 30px;
         color: #000000;
     }
     #line{
