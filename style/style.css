@@ -65,6 +65,16 @@ button{
     #list p {
         font-size: 32px;
     }
+    #footer{
+        gap: 60px;
+    }
+    #footer img{
+        width: 200px;
+        height: 200px;;
+    }
+    #contacts{
+        font-size: 48px;
+    }
 }
 header {
     display: flex;
