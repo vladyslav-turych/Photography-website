@@ -20,7 +20,7 @@ button{
 }
 @media (max-width: 1024px) {
     #hrader{
-        height: 800px;
+        height: 1000px;
     }
     #links {
         display: none;
