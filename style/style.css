@@ -47,6 +47,9 @@ button{
     .scrolled #links a{
         color: #000000;
     }
+    #list{
+        width: 90%;
+    }
     #h1{
         font-size: 92px;
     }
