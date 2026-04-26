@@ -10,6 +10,7 @@
     list-style: none;
     scroll-behavior: smooth;
     font-weight: normal;
+    margin: 0;
 }
 button{
     background-color: #f3f3f3;
