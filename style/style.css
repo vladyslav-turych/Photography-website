@@ -68,6 +68,12 @@ button{
     #list p {
         font-size: 32px;
     }
+    #infosection h2{
+        font-size: 60px;
+    }
+    #infosection p{
+        font-size: 48px;
+    }
     #footer{
         gap: 60px;
         padding-top: 100px;
