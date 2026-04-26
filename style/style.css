@@ -67,13 +67,11 @@ button{
     }
     #footer{
         gap: 60px;
+        font-size: 48px;
     }
     #footer img{
         width: 200px;
         height: 200px;;
-    }
-    #contacts{
-        font-size: 48px;
     }
 }
 header {
