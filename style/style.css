@@ -22,7 +22,7 @@ button{
     padding: 0;
 }
 @media (max-width: 1024px) {
-    #hrader{
+    #header{
         padding-top: 150px;
     }
     #links {
