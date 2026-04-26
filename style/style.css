@@ -23,9 +23,9 @@ button{
         display: none;
         color: #000000;
         text-align: left;
-        width: 320px;
+        width: 400px;
         height: 100%;
-        font-size: 24px;
+        font-size: 40px;
         padding: 0;
         background-color: #f3f3f3;
         position: fixed;
@@ -46,6 +46,18 @@ button{
     }
     .scrolled #links a{
         color: #000000;
+    }
+    #h1{
+        font-size: 92px;
+    }
+    #h3{
+        font-size: 52px;
+    }
+    #list h4 {
+        font-size: 40px;
+    }
+    #list p {
+        font-size: 32px;
     }
 }
 header {
@@ -106,7 +118,7 @@ header::before{
 }
 .cross{
     display: none;
-    font-size: 38px;
+    font-size: 104px;
     font-weight: 1000;
 }
 .scrolled .links a{
